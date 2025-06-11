@@ -34,7 +34,7 @@ public class ClientesProxyController {
                                             @RequestHeader HttpHeaders headers) {
 
         String originalPath = request.getRequestURI().replace("/api/proxy/clientes", "");
-        String targetUrl = "http://localhost:8086/api/clientes" + originalPath;
+        String targetUrl = "http://localhost:8081/api/clientes" + originalPath;
         HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         // Validar DELETE solo si no es admin

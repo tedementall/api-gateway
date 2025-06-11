@@ -33,7 +33,7 @@ public class VentasProxyController {
                                          @RequestHeader HttpHeaders headers) {
 
         String originalPath = request.getRequestURI().replace("/api/proxy/ventas", "");
-        String targetUrl = "http://localhost:8082/api/ventas" + originalPath;
+        String targetUrl = "http://localhost:8087/api/ventas" + originalPath;
         HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         
