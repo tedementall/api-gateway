@@ -34,7 +34,7 @@ public class ProductosProxyController {
                                             @RequestHeader HttpHeaders headers) {
 
         String originalPath = request.getRequestURI().replace("/api/proxy/productos", "");
-        String targetUrl = "http://localhost:8087/api/productos" + originalPath;
+        String targetUrl = "http://localhost:8088/api/productos" + originalPath;
         HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         // Validar DELETE solo si no es admin
